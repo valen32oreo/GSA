@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengumuman GSA 2026</title>
-    <!-- Tailwind CSS -->
+    <title>Announcement | Krisna Valencia Hidayat - GSA 2026</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="img/Logo 1-Photoroom.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="img/Logo-1-Photoroom.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         body {
@@ -19,12 +19,6 @@
                 linear-gradient(to right, rgba(203, 213, 225, 0.4) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(203, 213, 225, 0.4) 1px, transparent 1px);
             background-size: 30px 30px;
-            background-position: center top;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-            position: relative;
         }
 
         .fade-in-up {
@@ -32,163 +26,116 @@
             opacity: 0;
             transform: translateY(20px);
         }
-
         .delay-1 { animation-delay: 0.2s; }
         .delay-2 { animation-delay: 0.4s; }
         .delay-3 { animation-delay: 0.6s; }
 
         @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Kotak Timer */
-        .timer-box {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .timer-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Dekorasi Mengambang */
         .floating-shape {
             position: absolute;
             z-index: -1;
             animation: float 6s ease-in-out infinite;
         }
         @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(10deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
         }
     </style>
 </head>
-<body class="text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900">
+<body class="text-gray-800 antialiased selection:bg-blue-200">
 
-    <!-- Dekorasi Latar Belakang & Stiker -->
-    <div class="floating-shape bg-blue-100 rounded-full w-64 h-64 opacity-30 blur-3xl top-10 left-10" style="animation-delay: 0s;"></div>
+    <div class="floating-shape bg-blue-100 rounded-full w-64 h-64 opacity-30 blur-3xl top-10 left-10"></div>
     <div class="floating-shape bg-red-100 rounded-full w-48 h-48 opacity-20 blur-3xl bottom-20 right-20" style="animation-delay: 3s;"></div>
 
-    <!-- Stiker Megaphone (Kiri Atas) -->
-    <div class="absolute z-0 top-24 md:top-32 left-4 md:left-16 floating-shape" style="animation-delay: 1s;">
-        <img src="img/Logo 1-Photoroom.png" class="w-20 md:w-28 -rotate-12 opacity-90 drop-shadow-md hover:scale-110 hover:-rotate-6 transition-all duration-300" alt="Megaphone">
+    <div class="absolute z-0 top-24 left-4 md:left-16 floating-shape" style="animation-delay: 1s;">
+        <img src="img/Logo-1-Photoroom.png" class="w-20 md:w-28 -rotate-12 opacity-80" alt="Ryzcle Logo">
+    </div>
+    <div class="absolute z-0 top-16 right-4 md:right-16 floating-shape" style="animation-delay: 2.5s;">
+        <img src="img/Logo-2-Photoroom.png" class="w-32 md:w-44 rotate-6 opacity-80" alt="Ryzcle Tech">
     </div>
 
-    <!-- Stiker #Team Google (Kanan Atas) -->
-    <div class="absolute z-0 top-16 md:top-20 right-4 md:right-16 floating-shape" style="animation-delay: 2.5s;">
-        <img src="img/Logo 2-Photoroom.png" class="w-32 md:w-44 rotate-6 opacity-90 drop-shadow-md hover:scale-110 hover:rotate-12 transition-all duration-300" alt="Team Google">
-    </div>
-
-    <!-- Stiker Sparkle (Kiri Bawah) -->
-    <div class="absolute z-0 bottom-40 left-8 md:left-32 floating-shape" style="animation-delay: 3.5s;">
-        <img src="img/CODE_No_Background.png" class="w-16 md:w-20 rotate-12 opacity-80 drop-shadow-sm hover:scale-110 hover:rotate-45 transition-all duration-500" alt="Sparkle">
-    </div>
-
-    <!-- Stiker Rocket (Kanan Bawah) -->
-    <div class="absolute z-0 bottom-32 right-6 md:right-24 floating-shape" style="animation-delay: 0.5s;">
-        <img src="img/Hall_of_Fame_No_Background.png" class="w-24 md:w-32 -rotate-12 opacity-90 drop-shadow-md hover:scale-110 hover:-translate-y-2 transition-all duration-300" alt="Rocket">
-    </div>
-
-    <main class="flex-grow flex flex-col items-center justify-center w-full px-4 pt-12 pb-20 relative z-10">
+    <main class="flex flex-col items-center justify-center w-full px-4 pt-16 pb-20 relative z-10">
         
-        <!-- Header Logo (Menggantikan Pill) -->
-        <div class="fade-in-up mb-10 md:mb-12">
-            <div class="bg-white rounded-full px-6 py-3 shadow-sm border border-gray-100 inline-flex items-center justify-center">
-                <img src="img/woNnVDSsABNLZsKfqvF7AJwYUM.avif" alt="Google Student Ambassador" class="h-8 md:h-10 object-contain hover:scale-105 transition-transform duration-300">
+        <div class="fade-in-up mb-8">
+            <div class="bg-white rounded-full px-6 py-3 shadow-sm border border-gray-100 inline-flex items-center">
+                <img src="img/woNnVDSsABNLZsKfqvF7AJwYUM.avif" alt="Google Student Ambassador" class="h-8 md:h-10 object-contain">
             </div>
         </div>
 
-        <!-- Judul Utama -->
-        <h1 class="fade-in-up delay-1 text-center text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight max-w-4xl">
+        <h1 class="fade-in-up delay-1 text-center text-4xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
             Krisna Valencia Hidayat
         </h1>
         
-        <p class="fade-in-up delay-2 text-center text-gray-500 text-lg md:text-xl mb-14 max-w-2xl px-4">
-            I am thrilled to announce that I have been selected as a Google Student Ambassador (GSA) 2026! 🩵💙
+        <p class="fade-in-up delay-2 text-center text-gray-500 text-lg md:text-xl mb-16 max-w-2xl">
+            "Being selected as a <span class="font-bold text-blue-600">Google Student Ambassador 2026</span> is a profound honor and a testament to the technological vision we are pioneering at Ryzcle™ Labs."
         </p>
 
-        <section class="py-20">
-            <div class="max-w-7xl mx-auto px-6">
-                
-                <div class="mb-12 text-center lg:text-left" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 tracking-tighter uppercase">
-                        Official <span class="text-blue-600">Verification</span>
-                    </h2>
-                    <p class="text-slate-500 mt-2 font-medium">Dokumentasi resmi terpilihnya Founder sebagai Google Student Ambassador 2026.</p>
+        <section class="w-full max-w-6xl mx-auto mb-20">
+            <div class="mb-10 text-center lg:text-left" data-aos="fade-up">
+                <h2 class="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter">
+                    Official <span class="text-blue-600">Verification</span>
+                </h2>
+                <div class="h-1 w-20 bg-blue-600 mt-2 mx-auto lg:mx-0"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-[2rem] border border-white shadow-md hover:shadow-xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aspect-[4/5] overflow-hidden bg-white">
+                        <img src="img/email.jpg" alt="Email" class="w-full h-full object-cover group-hover:scale-110 transition-duration-700">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all p-8 flex flex-col justify-end">
+                        <p class="text-white font-bold text-lg">Acceptance Email</p>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                    
-                    <div class="group relative overflow-hidden rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                        <div class="aspect-[4/5] overflow-hidden bg-slate-100">
-                            <img src="img/email.jpg" alt="GSA Email Confirmation" 
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                            <p class="text-white font-bold text-lg">Acceptance Email</p>
-                            <p class="text-blue-200 text-sm">Official confirmation from Google</p>
-                        </div>
+                <div class="group relative overflow-hidden rounded-[2rem] border-4 border-blue-100 shadow-xl md:-translate-y-4 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aspect-[4/5] overflow-hidden bg-white">
+                        <img src="img/GSA_2026.jpg" alt="Badge" class="w-full h-full object-cover group-hover:scale-110 transition-duration-700">
                     </div>
-
-                    <div class="group relative overflow-hidden rounded-[2rem] border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-500 md:-translate-y-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="aspect-[4/5] overflow-hidden bg-slate-100">
-                            <img src="img/GSA_2026.jpg" alt="GSA 2026 Profile Badge" 
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                            <p class="text-white font-bold text-lg">Official Badge</p>
-                            <p class="text-blue-200 text-sm">Google Student Ambassador 2026</p>
-                        </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all p-8 flex flex-col justify-end">
+                        <p class="text-white font-bold text-lg">Official Badge</p>
                     </div>
-
-                    <div class="group relative overflow-hidden rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
-                        <div class="aspect-[4/5] overflow-hidden bg-slate-100">
-                            <img src="img/IMG_7745.PNG" alt="GSA Announcement" 
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                            <p class="text-white font-bold text-lg">Program Identity</p>
-                            <p class="text-blue-200 text-sm">Class of 2026 Recognition</p>
-                        </div>
-                    </div>
-
                 </div>
 
-                <div class="mt-12 p-6 bg-blue-50/50 rounded-3xl border border-blue-100 flex flex-col md:flex-row items-center gap-4 text-center md:text-left" data-aos="fade-up">
-                    <div class="bg-white p-3 rounded-full shadow-sm text-blue-600">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04a11.955 11.955 0 01-1.539 1.118A11.947 11.947 0 0010 18v1a1 1 0 001 1h2a1 1 0 001-1v-1a11.947 11.947 0 005.157-8.898z"></path></svg>
+                <div class="group relative overflow-hidden rounded-[2rem] border border-white shadow-md hover:shadow-xl transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
+                    <div class="aspect-[4/5] overflow-hidden bg-white">
+                        <img src="img/IMG_7745.PNG" alt="Announcement" class="w-full h-full object-cover group-hover:scale-110 transition-duration-700">
                     </div>
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        Seluruh aset di atas adalah dokumentasi resmi yang memvalidasi posisi <strong>Krisna Valencia Hidayat</strong> dalam program Google Student Ambassador. Data ini dipublikasikan untuk transparansi profesional <strong>Ryzcle™ Corp</strong>.
-                    </p>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all p-8 flex flex-col justify-end">
+                        <p class="text-white font-bold text-lg">Recognition</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="fade-in-up delay-3 bg-white p-5 md:p-6 rounded-2xl max-w-3xl w-full border border-gray-100 shadow-sm flex flex-col md:flex-row gap-4 items-start md:items-center">
-            <div class="bg-blue-50 p-3 rounded-full flex-shrink-0">
-                <svg class="w-6 h-6 text-[#4285F4]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <div class="fade-in-up delay-3 bg-white p-6 md:p-8 rounded-[2.5rem] max-w-3xl w-full border border-blue-50 shadow-sm flex flex-col md:flex-row gap-6 items-center">
+            <div class="bg-blue-50 p-4 rounded-full flex-shrink-0">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             </div>
-            <div>
-                <p class="text-sm md:text-base text-gray-600 leading-relaxed">
-                    Perjalanan saya melalui <strong>Ryzcle™ Corp</strong> (Ryzcle™ Labs & Ryzcle™ Technology) telah membentuk keyakinan saya bahwa inovasi lahir dari riset dan kolaborasi. Dari audit kode di Laravel hingga sistem di Unity, saya percaya setiap baris kode punya potensi dampak nyata.
+            <div class="text-center md:text-left">
+                <p class="text-gray-600 leading-relaxed mb-2">
+                    My journey through <strong>Ryzcle™ Corp</strong> has shaped my belief that innovation is born from research and collaboration.
                 </p>
-            </div>
-            <div>
-                <p class="text-sm md:text-base text-gray-600 leading-relaxed">
-                    Being part of hashtag <strong>#TeamGoogle</strong> is an incredible opportunity.
+                <p class="text-blue-600 font-bold">
+                    Being part of #TeamGoogle is an incredible opportunity to grow and impact the community.
                 </p>
             </div>
         </div>
-
     </main>
 
-    <!-- Footer -->
-    <footer class="w-full text-center pb-6 text-sm text-gray-400 relative z-10">
-        &copy; 2026 Krisna Valencia Hidayat, Google Student Ambassador Indonesia 2026
+    <footer class="w-full text-center pb-8 text-sm text-gray-400">
+        &copy; 2026 Krisna Valencia Hidayat • Google Student Ambassador Indonesia
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 </html>
